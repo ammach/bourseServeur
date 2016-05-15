@@ -1,4 +1,4 @@
-package bourseproject;
+package bourseServeur;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;

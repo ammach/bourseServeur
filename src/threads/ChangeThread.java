@@ -5,8 +5,9 @@
  */
 package threads;
 
-import bourseproject.ClientConnecte;
+import bourseServeur.ClientConnecte;
 import classes.Change;
+import classes.ModeChargement;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -38,8 +39,9 @@ public  class ChangeThread extends Thread{
     public void run() {
         super.run(); 
         ArrayList<String> valeurs;
-        while (true) {              
-            try {
+        while (true) {    
+            if (ModeChargement.aleatoire=true) {
+                try {
                 System.out.println("");
                 System.out.println("");
                 System.out.println("");
@@ -60,6 +62,8 @@ public  class ChangeThread extends Thread{
             } catch (InterruptedException ex) {
                 Logger.getLogger(ChangeThread.class.getName()).log(Level.SEVERE, null, ex);
             }
+            }
+            
         }
     }
     
